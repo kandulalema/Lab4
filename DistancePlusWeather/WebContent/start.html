@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="" data-ng-app="GoogleDirection">
+<head>
+<meta t="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angular Demo</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"
+	type="application/javascript"></script>
+<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+
+
+<link rel="stylesheet" href="css/main.css">
+
+<style>
+#map-canvas {
+	width: 650px;
+	height: 450px;
+}
+
+body {background ="images/lab.jpg";
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: red;
+}
+</style>
+</head>
+
+<body background="images/lab.jpg">
+
+	<div class="wrapp" ng-controller="googlemapoutput">
+		<div class="row">
+			<a
+				href="https://chart.googleapis.com/chart?chs=450x200&chd=t:40,30,30&cht=p3&chl=Profesor1|Profesor2|Profesor3"><font
+				color="white">google_chart</font></a><br> <br>
+
+
+			<script type="text/javascript"
+				src="//platform.twitter.com/widgets.js"></script>
+
+			<p>
+				<a
+					href="https://twitter.com/intent/tweet?in_reply_to=51113028241989632">Reply</a>
+			</p>
+
+			<p>
+				<a
+					href="https://twitter.com/intent/retweet?tweet_id=51113028241989632">Retweet</a>
+			</p>
+
+			<p>
+				<a
+					href="https://twitter.com/intent/favorite?tweet_id=51113028241989632">Favorite</a>
+			</p>
+
+			<a href="https://twitter.com/share" class="twitter-share-button"
+				data-lang="en">Tweet</a> <a
+				href="https://twitter.com/intent/tweet?screen_name=twitterapi"
+				class="twitter-mention-button" data-lang="en">Tweet to
+				@twitterapi</a> <br><br>
+				<input type="text" placeholder="Start location"
+				ng-model="startlocation" id="startlocation" /> <input type="text"
+				placeholder="Destination" ng-model="endlocation" id="endlocation" />
+			<br></br>
+			<button id="btn" ng-click="calcRoute()">Get Direction</button>
+			<br /></br>
+		</div>
+		<div id="map-canvas" style="height: 400px;"></div>
+	</div>
+	<br></br>
+
+	<div ng-controller="weatherctrl">
+		<button id="btn" class="btn" ng-click="getWeather()">Show
+			Weather</button>
+		<br></br>
+		<div class="weatherModule">
+			<p>{{ currenttemp }}</p>
+			<p>{{ currentweather }}</p>
+			<img ng-src="{{ currenticon }}">
+		</div>
+	</div>
+
+	<!-- Modules -->
+	<script src="js/app.js"></script>
+
+	<!-- Controllers -->
+	<script src="js/controllers/HomeController.js"></script>
+	<script src="js/controllers/WeatherController.js"></script>
+
+	<!-- Services -->
+	<!-- <script src ="js/services/climateservice.js"></script> -->
+</body>
+</html>

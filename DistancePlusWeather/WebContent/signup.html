@@ -1,0 +1,51 @@
+<html>
+<head>
+	
+	<script src="js/angular.min.js" ></script>    
+  	<script src="js/own.js"></script>
+	<script src="js/test.js"></script>
+	<script src="js/logsin.js"></script>
+
+    <title>Register Page</title>
+    <style type="text/css">
+   
+        #header {
+	
+	color: red;
+	text-align: center;
+	padding: 5px;
+}
+        #section{
+        width: 350px;
+	float: left;
+	padding: 10px;
+        }
+        body{
+        background ="images/lab.jpg"; 
+          background-size:cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: red;
+        }
+    </style>
+	</head>
+	
+	 <body background ="images/lab.jpg">
+		<div id = "header"><h1>Register</h1></div>
+  
+		 
+<div ng-app="LoginPage" ng-controller="LoginController">
+ Username    : <input type="text" ng-model="user.name"><br><br>
+ Password    : <input type="password" ng-model="user.pwd"><br><br>
+ Mobile      : <input type="text" ng-model="user.mobile"><br><br>
+ E-Mail      : <input type="text" ng-model="user.email"><br><br>
+ <input type="submit" ng-click="register(user.name,user.pwd,user.mobile,user.email)" value="Register">&nbsp&nbsp&nbsp&nbsp <input type="submit" value="login" onclick="window.location.href = 'signin.html'">
+			 
+			 
+			 
+			 <div ng-repeat=" res in registers ">{{ res }}</div>
+</div>
+    </body>
+
+</html>
+

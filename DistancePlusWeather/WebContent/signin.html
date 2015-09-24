@@ -1,0 +1,52 @@
+<html>
+<head>
+    <script src="js/angular.min.js" ></script>    
+  	<script src="js/logsin.js"></script>
+<!--	<script src="images/js/own.js"></script>-->
+	
+
+    <title>Login Page</title>
+    <style type="text/css">
+    bodymain{
+    background-image: url(/Users/Venu/Desktop/lab.jpg)
+        
+        
+    
+    }
+        #header {
+	
+	color: red;
+	text-align: center;
+	padding: 5px;
+}
+        #section{
+        width: 350px;
+	float: left;
+	padding: 10px;
+        }
+        body{
+        background ="images/lab.jpg"; 
+          background-size:cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: red;
+        }
+    </style>
+    </head>
+    <body  background ="images/lab.jpg" >
+		<div id="section" ng-app="LoginPage" ng-controller="LoginController">
+			
+			<table align ="right">
+        <tr><td>Enter username:</td><td><input type="text" name = "username" id = "username" data-ng-model="person.usern"></td></tr>
+			<tr><td>Enter password:</td><td><input type="password" name="password" id ="password" data-ng-model="person.passw">  </td></tr>
+				<tr align ="center"> <td><input type="submit" value="Login" onclick="window.location.href = 'start.html'"></input></td></tr>
+        </table>
+			
+	
+
+			
+
+	
+		 </div>	
+    </body>
+</html>
